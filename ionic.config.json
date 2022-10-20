@@ -1,0 +1,7 @@
+{
+  "name": "cineSala",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
