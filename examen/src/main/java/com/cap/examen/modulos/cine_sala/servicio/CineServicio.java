@@ -71,12 +71,14 @@ public class CineServicio {
     }
 
         //Eliminado logico y activado
-    public Boolean activarInactivar(CineDTO idCine) {
-        Cine cine = cineRepositorio.getOne(idCine.getCineId());
+    public Boolean activarInactivar(Integer idCine) {
+        Cine cine = cineRepositorio.getOne(idCine);
         cine.setRegistroActivo(!cine.getRegistroActivo());
         cineRepositorio.save(cine);
         return true;
     }
+    
+    
     
     // una sala con un cine
     /*public List<CineDTO> obtenerSalaDeCine(Integer idCine, Integer idSala) {
