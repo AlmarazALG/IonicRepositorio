@@ -1,0 +1,139 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cine
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cine</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<!-- 
+  {{89 + prueba}}
+  <input type="number" [(ngModel)]="prueba">
+
+  <app-explore-container name="Hola"></app-explore-container>
+
+ -->
+
+  <!--  <app-explore-container name="Hola"></app-explore-container>
+  <app-gatito [dato1]="datoAlHijo" [dato2]="232"  (regrsarAlPadre)="actualizaDatoHijo($event)"></app-gatito>
+  <br>
+  <br>
+  <br>
+  <br>
+  {{datoAlHijo}}-->
+
+<!--   <ion-button [routerLink]="['/tabs/nueva/pagina']" > ir a nueva pagina</ion-button> -->
+    ////////////////////////////// CREAR//////////////////////////////
+    <ion-content class="ion-padding">
+      <ion-button id="open-modal" expand="block">Crear</ion-button>
+      <ion-modal trigger="open-modal"></ion-modal>
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="cancel()">Cancelar</ion-button>
+              </ion-buttons>
+              <ion-title>Crear Cine</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="guardarCine()" [strong]="true">Guardar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <p>
+              <ion-list>
+                <ion-item>
+                  <ion-label>Nombre del Cine</ion-label>
+                  <ion-input placeholder="Nombre"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Fecha de Alta</ion-label>
+                  <ion-input placeholder="YYYY/MM/DD"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Fecha de Modificacion</ion-label>
+                  <ion-input placeholder="YYYY/MM/DD"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Registro activo</ion-label>
+                  <ion-input placeholder="true/false"></ion-input>
+                </ion-item>
+              </ion-list>
+            </p>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-content>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Cines</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item v-for="item of Cine" :key="item.idCine">
+          <ion-thumbnail slot="start">
+          </ion-thumbnail>
+          <ion-label>{{item.nombre}}</ion-label>
+          <ion-label>{{item.fechaA}}</ion-label>
+          <ion-label>{{item.fechaM}}</ion-label>
+          <ion-label>{{item.activo}}</ion-label>
+                  
+          ////////////////////////////// EDITAR//////////////////////////////
+          <ion-content class="ion-padding">
+            <ion-button id="open-modal" expand="block">Editar</ion-button>
+            <ion-modal trigger="open-modal"></ion-modal>
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-buttons slot="start">
+                      <ion-button (click)="cancel()">Cancelar</ion-button>
+                    </ion-buttons>
+                    <ion-title>Editar Cine</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="actualizarCine()" [strong]="true">Guardar</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding">
+                  <p>
+                    <ion-list>
+                      <ion-item>
+                        <ion-label>Nombre del Cine</ion-label>
+                        <ion-input placeholder="Nombre"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Fecha de Alta</ion-label>
+                        <ion-input placeholder="YYYY/MM/DD"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Fecha de Modificacion</ion-label>
+                        <ion-input placeholder="YYYY/MM/DD"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Registro activo</ion-label>
+                        <ion-input placeholder="true/false"></ion-input>
+                      </ion-item>
+                    </ion-list>
+                  </p>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </ion-content>
+
+          <ion-button (click)="activarInactivar()">Eliminar</ion-button>
+        </ion-item>    
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+  
+</ion-content>

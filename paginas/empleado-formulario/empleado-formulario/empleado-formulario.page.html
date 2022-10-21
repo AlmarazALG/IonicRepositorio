@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>empleado-formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="empleado.empleado" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido</ion-label>
+      <ion-input  [(ngModel)]="empleado.apellido"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-input  [(ngModel)]="empleado.fecha"  placeholder="Enter text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" [routerLink]="['/empleado-formulario']">Agregar</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let item of lista" (click)="seleccionar(item)">
+      <ion-label>{{item.empleado}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
