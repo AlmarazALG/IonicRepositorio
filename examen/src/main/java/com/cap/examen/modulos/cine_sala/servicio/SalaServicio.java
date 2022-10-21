@@ -70,8 +70,8 @@ public class SalaServicio {
     }
 
         //Eliminado logico y activado
-    public Boolean activarInactivar(SalaDTO idSala) {
-        Sala sala = salaRepositorio.getOne(idSala.getSalaId());
+    public Boolean activarInactivar(Integer idSala) {
+        Sala sala = salaRepositorio.getOne(idSala);
         sala.setRegistroActivo(!sala.getRegistroActivo());
         salaRepositorio.save(sala);
         return true;
