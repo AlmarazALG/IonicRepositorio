@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sala</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>id</ion-label>
+      <ion-input [(ngModel)]="sala.id" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Numero</ion-label>
+      <ion-input  [(ngModel)]="sala.numeroS"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Total</ion-label>
+      <ion-input  [(ngModel)]="sala.totalA"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>FechaAlta</ion-label>
+      <ion-input  [(ngModel)]="sala.fechaA"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>FechaModificacion</ion-label>
+      <ion-input  [(ngModel)]="sala.fechaM"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>RegistroActivo</ion-label>
+      <ion-input  [(ngModel)]="sala.activo"  placeholder="Enter text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+</ion-content>
