@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Id</ion-label>
+      <ion-input [(ngModel)]="cine.id" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="cine.nombre" placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>FechaAlta</ion-label>
+      <ion-input  [(ngModel)]="cine.fechaA"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>FechaModificacion</ion-label>
+      <ion-input  [(ngModel)]="cine.fechaM"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>RegistroActivo</ion-label>
+      <ion-input  [(ngModel)]="cine.activo"  placeholder="Enter text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+</ion-content>
