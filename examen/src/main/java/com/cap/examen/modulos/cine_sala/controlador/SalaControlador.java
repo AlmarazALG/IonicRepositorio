@@ -47,8 +47,8 @@ public class SalaControlador {
     
     //Pasando parametros por body
     @PutMapping("activar-inactivar")
-    public ResponseEntity<Boolean> activarInactivar(@RequestBody SalaDTO sala){
-        Boolean respuesta = salaServicio.activarInactivar(sala);
+    public ResponseEntity<Boolean> activarInactivar(@RequestParam Integer idSala){
+        Boolean respuesta = salaServicio.activarInactivar(idSala);
         return new ResponseEntity<>(respuesta, HttpStatus.OK);
     }
 }

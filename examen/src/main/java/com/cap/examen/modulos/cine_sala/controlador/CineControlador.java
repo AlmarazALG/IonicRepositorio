@@ -54,8 +54,8 @@ public class CineControlador {
     
     //Pasando parametros por body
     @PutMapping("activar-inactivar")
-    public ResponseEntity<Boolean> activarInactivar(@RequestBody CineDTO cine){
-        Boolean respuesta = cineServicio.activarInactivar(cine);
+    public ResponseEntity<Boolean> activarInactivar(@RequestParam Integer idCine){
+        Boolean respuesta = cineServicio.activarInactivar(idCine);
         return new ResponseEntity<>(respuesta, HttpStatus.OK);
     }
 }
